@@ -29,9 +29,9 @@
 # training = Training.create({user_id: 2, category: "Education", org_or_institution: "University of New Hamsphire", description: "BA in Theatre, some physics", dates: "2005-2007", degree_or_cert: "BA in theatre", location: "NH", misc: "College"})
 # experience.save
 
-experience = Experience.create({user_id: 3, category: "Skills", description: "Commander, Sharff fam"})
-experience.save
+# experience = Experience.create({user_id: 3, category: "Skills", description: "Commander, Sharff fam"})
+# experience.save
 
-training = Training.create({user_id: 3, category: "Professional dev", org_or_institution: "CRES Elementary School", description: "Kindergarten, 100+ days", dates: "2021-2022", degree_or_cert: "N/A", location: "ME", misc: "Showing kindergarten who's boss, adorably."})
-experience.save
+# training = Training.create({user_id: 3, category: "Professional dev", org_or_institution: "CRES Elementary School", description: "Kindergarten, 100+ days", dates: "2021-2022", degree_or_cert: "N/A", location: "ME", misc: "Showing kindergarten who's boss, adorably."})
+# experience.save
 
