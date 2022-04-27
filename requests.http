@@ -27,3 +27,7 @@ Content-Type: application/json
   "location": "Wherever/whenever",
   "misc": "playing"
 }
+
+###SHOW EXPERIENCE 
+GET http://localhost:3000/experiences/8
+Content-Type: application/json
