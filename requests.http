@@ -8,3 +8,22 @@ Content-Type: application/json
   "password": "password",
   "password_confirmation": "password"
 }
+
+###INDEX EXPERIENCE 
+GET http://localhost:3000/experiences
+Content-Type: application/json
+
+###CREATE EXPERIENCE 
+POST http://localhost:3000/experiences
+Content-Type: application/json
+
+{
+  "user_id": 3,
+  "category": "Volunteer work",
+  "org_or_institution": "Play For Free Inc.",
+  "description": "Plays by herself and with others for free",
+  "title": "Playing Volunteer",
+  "date": "2016 - present",
+  "location": "Wherever/whenever",
+  "misc": "playing"
+}
