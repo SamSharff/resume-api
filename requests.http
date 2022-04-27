@@ -31,3 +31,11 @@ Content-Type: application/json
 ###SHOW EXPERIENCE 
 GET http://localhost:3000/experiences/8
 Content-Type: application/json
+
+###UPDATE EXPERIENCE 
+PATCH http://localhost:3000/experiences/8
+Content-Type: application/json
+
+{
+  "misc": "Playing"
+}
