@@ -58,3 +58,7 @@ Content-Type: application/json
   "location": "England ",
   "misc": "school"
 }
+
+###SHOW TRAINING 
+GET http://localhost:3000/trainings/2
+Content-Type: application/json

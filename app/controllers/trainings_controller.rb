@@ -19,4 +19,11 @@ class TrainingsController < ApplicationController
   training.save
   render json: training.as_json
   end
+
+  def show
+    training_id = params["id"]
+    training = Training.find_by(id: training_id)
+
+    render json: training.as_json
+  end
 end

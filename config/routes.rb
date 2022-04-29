@@ -8,4 +8,5 @@ Rails.application.routes.draw do
 
   get "/trainings" => "trainings#index"
   post "/trainings" => "trainings#create"
+  get "/trainings/:id" => "trainings#show"
 end
