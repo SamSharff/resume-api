@@ -11,7 +11,12 @@ class TrainingsController < ApplicationController
     org_or_institution: params["org_or_institution"],
     description: params["description"],
     dates: params["dates"],
+    degree_or_cert: params["degree_or_cert"],
     location: params["location"],
     misc: params["misc"]
   )
+
+  training.save
+  render json: training.as_json
+  end
 end

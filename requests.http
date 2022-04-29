@@ -23,7 +23,7 @@ Content-Type: application/json
   "org_or_institution": "SPEW",
   "description": "Advocating for elf rights.",
   "title": "Founder",
-  "date": "1996 - present",
+  "dates": "1996 - present",
   "location": "Hogwarts",
   "misc": "advocacy work"
 }
@@ -43,3 +43,18 @@ Content-Type: application/json
 ###INDEX TRAINING 
 GET http://localhost:3000/trainings
 Content-Type: application/json
+
+###CREATE TRAINING 
+POST http://localhost:3000/trainings
+Content-Type: application/json
+
+{
+  "user_id": 8,
+  "category": "Education",
+  "org_or_institution": "Hogwarts",
+  "description": "Age 11-18.",
+  "dates": "1996 - present",
+  "degree_or_cert": "degree",
+  "location": "England ",
+  "misc": "school"
+}
