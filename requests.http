@@ -70,3 +70,12 @@ Content-Type: application/json
 {
   "misc": "school"
 }
+
+###SESSIONS CREATE
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "Sam@example.com",
+  "password": "password"
+}
