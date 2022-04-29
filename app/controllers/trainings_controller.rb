@@ -26,4 +26,21 @@ class TrainingsController < ApplicationController
 
     render json: training.as_json
   end
+
+  def update
+    training_id = params["id"]
+    training = Training.find_by(id: training_id)
+
+    training.user_id = params["user_id"] || training.user_id
+    training.category = params["category"] || training.category
+    training.org_or_institution = params["org_or_institution"] || training.org_or_institution
+    training.description = params["description"] || training.description
+    training.dates = params["dates"] || training.dates
+    training.degree_or_cert = params["degree_or_cert"] || training.degree_or_cert
+    training.location = params["location"] || training.location
+    training.misc = params["misc"] || training.misc
+
+    training.save
+    render json: training.as_json
+  end 
 end

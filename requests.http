@@ -60,5 +60,13 @@ Content-Type: application/json
 }
 
 ###SHOW TRAINING 
-GET http://localhost:3000/trainings/2
+GET http://localhost:3000/trainings/
 Content-Type: application/json
+
+###UPDATE TRAINING
+PATCH http://localhost:3000/trainings/3
+Content-Type: application/json
+
+{
+  "misc": "school"
+}
