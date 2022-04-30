@@ -3,7 +3,7 @@ class ExperiencesController < ApplicationController
 
 
   def index
-    experiences = Experience.all
+    experiences = current_user.experiences
     render json: experiences.as_json
   end
 
