@@ -1,4 +1,7 @@
 class ExperiencesController < ApplicationController
+  before_action :authenticate_user
+
+
   def index
     experiences = Experience.all
     render json: experiences.as_json
@@ -6,7 +9,7 @@ class ExperiencesController < ApplicationController
 
   def create
     experience = Experience.new(
-    user_id: params["user_id"],
+    user_id: current_user.id,
     category: params["category"],
     org_or_institution: params["org_or_institution"],
     description: params["description"],
