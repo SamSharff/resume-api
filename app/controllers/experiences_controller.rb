@@ -24,7 +24,8 @@ class ExperiencesController < ApplicationController
   end
 
   def show
-    experience_id = params["id"]
+    experience_id = current_user.experiences.find_by(id: params["id"])
+    # experience_id = params["id"]
     experience = Experience.find_by(id: experience_id)
 
     render json: experience.as_json

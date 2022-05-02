@@ -1,5 +1,6 @@
 
-@jwt_sam = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE0MDkyMDh9.mPUxPNStMG_KkV81RAqVGUhaTqzfdYpdegJBIKurMAE
+# @jwt_sam = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE1OTA0NDB9.S4y_dkhRfHYnobrjqCSySCETNj-C123HQ642t3NlsAk
+# @jwt_aaron = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTE1OTA4Nzh9.L5ZQbLatJiPCelfT5jd8-TV9ySpuI4McU92w6LfxfsU
 
 ###CREATE USER (sign-up)
 POST http://localhost:3000/users
@@ -14,27 +15,23 @@ Content-Type: application/json
 
 ###INDEX EXPERIENCE 
 GET http://localhost:3000/experiences
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE0MDkyMDh9.mPUxPNStMG_KkV81RAqVGUhaTqzfdYpdegJBIKurMAE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE1OTA1Mzd9.7L5viHh9VrgUlhbYSQzkVkqnIH2YbeeunA_RZQC37O4
 Content-Type: application/json
 
 ###CREATE EXPERIENCE 
 POST http://localhost:3000/experiences
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTE1OTA4Nzh9.L5ZQbLatJiPCelfT5jd8-TV9ySpuI4McU92w6LfxfsU
 Content-Type: application/json
 
 {
-  "user_id": 8,
-  "category": "Volunteer work",
-  "org_or_institution": "SPEW",
-  "description": "Advocating for elf rights.",
-  "title": "Founder",
-  "dates": "1996 - present",
-  "location": "Hogwarts",
-  "misc": "advocacy work"
-}
+  "user_id": 2,
+  "category": "Skill",
+  "description": "SQL"
+  }
 
 ###SHOW EXPERIENCE 
-GET http://localhost:3000/experiences/3
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE0MDkyMDh9.mPUxPNStMG_KkV81RAqVGUhaTqzfdYpdegJBIKurMAE
+GET http://localhost:3000/experiences/10
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTE1OTA4Nzh9.L5ZQbLatJiPCelfT5jd8-TV9ySpuI4McU92w6LfxfsU
 Content-Type: application/json
 
 ###UPDATE EXPERIENCE 
@@ -81,6 +78,6 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "Sam@example.com",
+  "email": "Aaron@example.com",
   "password": "password"
 }
