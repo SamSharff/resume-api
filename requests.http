@@ -13,6 +13,16 @@ Content-Type: application/json
   "password_confirmation": "password"
 }
 
+###SESSIONS CREATE
+POST http://localhost:3000/sessions.json
+Content-Type: application/json
+
+{
+  "email": "Sam@example.com",
+  "password": "password"
+}
+
+                            # EXPERIENCE #
 ###INDEX EXPERIENCE 
 GET http://localhost:3000/experiences
 Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE2NzUyMTl9.FKOR93S3GVR7COF2aYcIvKlZgLhEl7CsVht-Zv-yR7c
@@ -42,8 +52,10 @@ Content-Type: application/json
   "description": "Makes great hot chocolate"
 }
 
+                              # TRAINING #
 ###INDEX TRAINING 
 GET http://localhost:3000/trainings
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE2NzUyMTl9.FKOR93S3GVR7COF2aYcIvKlZgLhEl7CsVht-Zv-yR7c
 Content-Type: application/json
 
 ###CREATE TRAINING 
@@ -51,18 +63,18 @@ POST http://localhost:3000/trainings
 Content-Type: application/json
 
 {
-  "user_id": 8,
+  "user_id": 1,
   "category": "Education",
-  "org_or_institution": "Hogwarts",
-  "description": "Age 11-18.",
-  "dates": "1996 - present",
-  "degree_or_cert": "degree",
-  "location": "England ",
-  "misc": "school"
+  "org_or_institution": "Actualize Coding Bootcamp",
+  "description": "Full-stack engineering bootcamp that teaches you to teach yourself.",
+  "dates": "Jan - May 2022",
+  "degree_or_cert": "certificate",
+  "location": "Remote ",
+  "misc": "tech education"
 }
 
 ###SHOW TRAINING 
-GET http://localhost:3000/trainings/
+GET http://localhost:3000/trainings/4
 Content-Type: application/json
 
 ###UPDATE TRAINING
@@ -70,14 +82,5 @@ PATCH http://localhost:3000/trainings/3
 Content-Type: application/json
 
 {
-  "misc": "school"
-}
-
-###SESSIONS CREATE
-POST http://localhost:3000/sessions.json
-Content-Type: application/json
-
-{
-  "email": "Sam@example.com",
-  "password": "password"
+  "degree_or_cert": "Degree"
 }

@@ -1,7 +1,6 @@
 class ExperiencesController < ApplicationController
   before_action :authenticate_user
 
-
   def index
     experiences = current_user.experiences
     render json: experiences.as_json
@@ -26,7 +25,6 @@ class ExperiencesController < ApplicationController
 
   def show
     experience_id = current_user.experiences.find_by(id: params[:id])
-    # experience_id = params[:id]
     experience = Experience.find_by(id: experience_id)
 
     render json: experience.as_json
@@ -34,7 +32,6 @@ class ExperiencesController < ApplicationController
 
   def update
     experience_id = current_user.experiences.find_by(id: params[:id])
-    # experience_id = params[:id]
     experience = Experience.find_by(id: experience_id)
 
     # experience.user_id = params[:user_id] || experience.user_id
