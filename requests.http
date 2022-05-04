@@ -1,5 +1,5 @@
 
-# @jwt_sam = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE1OTA0NDB9.S4y_dkhRfHYnobrjqCSySCETNj-C123HQ642t3NlsAk
+# @jwt_sam = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE2NzUyMTl9.FKOR93S3GVR7COF2aYcIvKlZgLhEl7CsVht-Zv-yR7c
 # @jwt_aaron = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTE1OTA4Nzh9.L5ZQbLatJiPCelfT5jd8-TV9ySpuI4McU92w6LfxfsU
 
 ###CREATE USER (sign-up)
@@ -15,31 +15,31 @@ Content-Type: application/json
 
 ###INDEX EXPERIENCE 
 GET http://localhost:3000/experiences
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE1OTA1Mzd9.7L5viHh9VrgUlhbYSQzkVkqnIH2YbeeunA_RZQC37O4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE2NzUyMTl9.FKOR93S3GVR7COF2aYcIvKlZgLhEl7CsVht-Zv-yR7c
 Content-Type: application/json
 
 ###CREATE EXPERIENCE 
 POST http://localhost:3000/experiences
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTE1OTA4Nzh9.L5ZQbLatJiPCelfT5jd8-TV9ySpuI4McU92w6LfxfsU
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE2NzUyMTl9.FKOR93S3GVR7COF2aYcIvKlZgLhEl7CsVht-Zv-yR7c
 Content-Type: application/json
 
 {
-  "user_id": 2,
   "category": "Skill",
-  "description": "SQL"
+  "description": "hat making"
   }
 
 ###SHOW EXPERIENCE 
-GET http://localhost:3000/experiences/10
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTE1OTA4Nzh9.L5ZQbLatJiPCelfT5jd8-TV9ySpuI4McU92w6LfxfsU
+GET http://localhost:3000/experiences/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE2NzUyMTl9.FKOR93S3GVR7COF2aYcIvKlZgLhEl7CsVht-Zv-yR7c
 Content-Type: application/json
 
 ###UPDATE EXPERIENCE 
-PATCH http://localhost:3000/experiences/8
+PATCH http://localhost:3000/experiences/12
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE2NzUyMTl9.FKOR93S3GVR7COF2aYcIvKlZgLhEl7CsVht-Zv-yR7c
 Content-Type: application/json
 
 {
-  "misc": "Playing"
+  "description": "Jumps really high"
 }
 
 ###INDEX TRAINING 
@@ -78,6 +78,6 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "Aaron@example.com",
+  "email": "Sam@example.com",
   "password": "password"
 }
