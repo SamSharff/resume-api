@@ -60,17 +60,17 @@ Content-Type: application/json
 
 ###CREATE TRAINING 
 POST http://localhost:3000/trainings
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE2NzUyMTl9.FKOR93S3GVR7COF2aYcIvKlZgLhEl7CsVht-Zv-yR7c
 Content-Type: application/json
 
 {
-  "user_id": 1,
   "category": "Education",
-  "org_or_institution": "Actualize Coding Bootcamp",
-  "description": "Full-stack engineering bootcamp that teaches you to teach yourself.",
-  "dates": "Jan - May 2022",
-  "degree_or_cert": "certificate",
-  "location": "Remote ",
-  "misc": "tech education"
+  "org_or_institution": "UNH",
+  "description": "Liberal Arts education specializing in acting, directing, and performance.",
+  "dates": "2003 - 2007",
+  "degree_or_cert": "BA in Theatre",
+  "location": "NH",
+  "misc": "Bachelors"
 }
 
 ###SHOW TRAINING 

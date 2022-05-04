@@ -8,14 +8,14 @@ class TrainingsController < ApplicationController
 
   def create
     training = Training.new(
-    user_id: params["user_id"],
-    category: params["category"],
-    org_or_institution: params["org_or_institution"],
-    description: params["description"],
-    dates: params["dates"],
-    degree_or_cert: params["degree_or_cert"],
-    location: params["location"],
-    misc: params["misc"]
+    user_id: current_user.id,
+    category: params[:category],
+    org_or_institution: params[:org_or_institution],
+    description: params[:description],
+    dates: params[:dates],
+    degree_or_cert: params[:degree_or_cert],
+    location: params[:location],
+    misc: params[:misc]
   )
 
   training.save
