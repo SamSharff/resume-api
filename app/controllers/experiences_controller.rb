@@ -33,10 +33,11 @@ class ExperiencesController < ApplicationController
   end
 
   def update
-    experience_id = params[:id]
+    experience_id = current_user.experiences.find_by(id: params[:id])
+    # experience_id = params[:id]
     experience = Experience.find_by(id: experience_id)
 
-    experience.user_id = params[:user_id] || experience.user_id
+    # experience.user_id = params[:user_id] || experience.user_id
     experience.category = params[:category] || experience.category
     experience.org_or_institution = params[:org_or_institution] || experience.org_or_institution
     experience.description = params[:description] || experience.description
