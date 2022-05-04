@@ -23,7 +23,7 @@ class TrainingsController < ApplicationController
   end
 
   def show
-    training_id = params["id"]
+    training_id = current_user.trainings.find_by(id: params[:id])
     training = Training.find_by(id: training_id)
 
     render json: training.as_json

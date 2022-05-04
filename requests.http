@@ -1,5 +1,5 @@
 
-# @jwt_sam = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE2NzUyMTl9.FKOR93S3GVR7COF2aYcIvKlZgLhEl7CsVht-Zv-yR7c
+@jwt_sam = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE3NjA5MTJ9.cDxoVC069tIEa-5KJep6cOZ4qb5mUcj2wsj1Lru3RYo
 # @jwt_aaron = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTE1OTA4Nzh9.L5ZQbLatJiPCelfT5jd8-TV9ySpuI4McU92w6LfxfsU
 
 ###CREATE USER (sign-up)
@@ -25,12 +25,12 @@ Content-Type: application/json
                             # EXPERIENCE #
 ###INDEX EXPERIENCE 
 GET http://localhost:3000/experiences
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE2NzUyMTl9.FKOR93S3GVR7COF2aYcIvKlZgLhEl7CsVht-Zv-yR7c
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 ###CREATE EXPERIENCE 
 POST http://localhost:3000/experiences
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE2NzUyMTl9.FKOR93S3GVR7COF2aYcIvKlZgLhEl7CsVht-Zv-yR7c
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 {
@@ -40,12 +40,12 @@ Content-Type: application/json
 
 ###SHOW EXPERIENCE 
 GET http://localhost:3000/experiences/1
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE2NzUyMTl9.FKOR93S3GVR7COF2aYcIvKlZgLhEl7CsVht-Zv-yR7c
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 ###UPDATE EXPERIENCE 
 PATCH http://localhost:3000/experiences/14
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTE1OTA4Nzh9.L5ZQbLatJiPCelfT5jd8-TV9ySpuI4McU92w6LfxfsU
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 {
@@ -55,12 +55,12 @@ Content-Type: application/json
                               # TRAINING #
 ###INDEX TRAINING 
 GET http://localhost:3000/trainings
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE2NzUyMTl9.FKOR93S3GVR7COF2aYcIvKlZgLhEl7CsVht-Zv-yR7c
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 ###CREATE TRAINING 
 POST http://localhost:3000/trainings
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE2NzUyMTl9.FKOR93S3GVR7COF2aYcIvKlZgLhEl7CsVht-Zv-yR7c
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 {
@@ -74,7 +74,8 @@ Content-Type: application/json
 }
 
 ###SHOW TRAINING 
-GET http://localhost:3000/trainings/4
+GET http://localhost:3000/trainings/5
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 ###UPDATE TRAINING
