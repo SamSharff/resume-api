@@ -79,9 +79,10 @@ Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 ###UPDATE TRAINING
-PATCH http://localhost:3000/trainings/3
+PATCH http://localhost:3000/trainings/5
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 {
-  "degree_or_cert": "Degree"
+  "misc": "College"
 }
