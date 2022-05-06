@@ -45,7 +45,10 @@ class ExperiencesController < ApplicationController
     experience.location = params[:location] || experience.location
     experience.misc = params[:misc] || experience.misc
 
-    experience.save
-    render json: experience.as_json
+    if experience.save
+      render json: experience
+    else
+      render json: { errors: experience.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 end

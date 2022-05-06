@@ -1,14 +1,15 @@
 
 @jwt_sam = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE5Mjg2NTV9.atOGgd8WIWebwlkd-nwa_TjIXg2r-Nf3szmtgA5ADgg
 # @jwt_aaron = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTE1OTA4Nzh9.L5ZQbLatJiPCelfT5jd8-TV9ySpuI4McU92w6LfxfsU
+@jwt_amanda = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5LCJleHAiOjE2NTE5NDE1NzJ9.JLrN3JWfAUVzRA8l8h2oyau5Ar6Vj8U-dgeoXY6XbNE
 
 ###CREATE USER (sign-up)
 POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "name": "Hermione Granger",
-  "email": "Hermione@test.com",
+  "name": "Amanda",
+  "email": "Amanda@test.com",
   "password": "password",
   "password_confirmation": "password"
 }
@@ -18,49 +19,49 @@ POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "Sam@example.com",
+  "email": "Amanda@test.com",
   "password": "password"
 }
 
                             # EXPERIENCE #
 ###INDEX EXPERIENCE 
 GET http://localhost:3000/experiences
-Authorization: Bearer {{jwt_sam}}
+Authorization: Bearer {{jwt_amanda}}
 Content-Type: application/json
 
 ###CREATE EXPERIENCE 
 POST http://localhost:3000/experiences
-Authorization: Bearer {{jwt_sam}}
+Authorization: Bearer {{jwt_amanda}}
 Content-Type: application/json
 
 {
   "category": "Skill",
-  "description": "P"
+  "description": "Pumpkin bread"
   }
 
 ###SHOW EXPERIENCE 
-GET http://localhost:3000/experiences/6
-Authorization: Bearer {{jwt_sam}}
+GET http://localhost:3000/experiences/30
+Authorization: Bearer {{jwt_amanda}}
 Content-Type: application/json
 
 ###UPDATE EXPERIENCE 
-PATCH http://localhost:3000/experiences/14
-Authorization: Bearer {{jwt_sam}}
+PATCH http://localhost:3000/experiences/30
+Authorization: Bearer {{jwt_amanda}}
 Content-Type: application/json
 
 {
-  "description": "Makes great hot chocolate"
+  "description": "mardi gras"
 }
 
                               # TRAINING #
 ###INDEX TRAINING 
 GET http://localhost:3000/trainings
-Authorization: Bearer {{jwt_sam}}
+Authorization: Bearer {{jwt_amanda}}
 Content-Type: application/json
 
 ###CREATE TRAINING 
 POST http://localhost:3000/trainings
-Authorization: Bearer {{jwt_sam}}
+Authorization: Bearer {{jwt_amanda}}
 Content-Type: application/json
 
 {
@@ -74,13 +75,13 @@ Content-Type: application/json
 }
 
 ###SHOW TRAINING 
-GET http://localhost:3000/trainings/5
-Authorization: Bearer {{jwt_sam}}
+GET http://localhost:3000/trainings/6
+Authorization: Bearer {{jwt_amanda}}
 Content-Type: application/json
 
 ###UPDATE TRAINING
-PATCH http://localhost:3000/trainings/5
-Authorization: Bearer {{jwt_sam}}
+PATCH http://localhost:3000/trainings/6
+Authorization: Bearer {{jwt_amanda}}
 Content-Type: application/json
 
 {
