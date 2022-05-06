@@ -66,12 +66,9 @@ Content-Type: application/json
 
 {
   "category": "Education",
-  "org_or_institution": "UNH",
-  "description": "Liberal Arts education specializing in acting, directing, and performance.",
-  "dates": "2003 - 2007",
-  "degree_or_cert": "BA in Theatre",
-  "location": "NH",
-  "misc": "Bachelors"
+  "org_or_institution": "Actualize",
+  "description": "Coding bootcamp",
+  "degree_or_cert": "Cert in web development"
 }
 
 ###SHOW TRAINING 
@@ -85,5 +82,5 @@ Authorization: Bearer {{jwt_amanda}}
 Content-Type: application/json
 
 {
-  "misc": "College"
+  "org_or_institution": "College"
 }

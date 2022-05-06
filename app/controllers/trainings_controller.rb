@@ -17,9 +17,11 @@ class TrainingsController < ApplicationController
       location: params[:location],
       misc: params[:misc],
     )
-
-    training.save
-    render json: training.as_json
+    if training.save
+      render json: training
+    else
+      render json: { errors: training.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def show
@@ -41,7 +43,10 @@ class TrainingsController < ApplicationController
     training.location = params[:location] || training.location
     training.misc = params[:misc] || training.misc
 
-    training.save
-    render json: training.as_json
+    if training.save
+      render json: training
+    else
+      render json: { errors: training.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 end
