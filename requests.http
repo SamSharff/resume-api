@@ -1,5 +1,5 @@
 
-@jwt_sam = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE3NjA5MTJ9.cDxoVC069tIEa-5KJep6cOZ4qb5mUcj2wsj1Lru3RYo
+@jwt_sam = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE5Mjg2NTV9.atOGgd8WIWebwlkd-nwa_TjIXg2r-Nf3szmtgA5ADgg
 # @jwt_aaron = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTE1OTA4Nzh9.L5ZQbLatJiPCelfT5jd8-TV9ySpuI4McU92w6LfxfsU
 
 ###CREATE USER (sign-up)
@@ -35,11 +35,11 @@ Content-Type: application/json
 
 {
   "category": "Skill",
-  "description": "hat making"
+  "description": "P"
   }
 
 ###SHOW EXPERIENCE 
-GET http://localhost:3000/experiences/1
+GET http://localhost:3000/experiences/6
 Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 

@@ -19,8 +19,11 @@ class ExperiencesController < ApplicationController
       misc: params[:misc],
     )
 
-    experience.save
-    render json: experience.as_json
+    if experience.save
+      render json: experience
+    else
+      render json: { errors: experience.errors.full_messages }, status: :unprocessable_entity
+    end
   end
 
   def show
