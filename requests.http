@@ -59,13 +59,9 @@ Content-Type: application/json
 }
 
 ###DESTROY EXPERIENCE 
-DELETE  http://localhost:3000/experiences/41
+DELETE  http://localhost:3000/experiences/6
 Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
-
-{
-  "misc": "Leadership/Toby farted"
-}
 
 ###INDEX TRAINING 
 GET http://localhost:3000/trainings
@@ -100,3 +96,8 @@ Content-Type: application/json
 {
   "dates": "1978 - 1982"
 }
+
+###DESTROY TRAINING 
+DELETE http://localhost:3000/trainings/16
+Authorization: Bearer {{jwt_sam}}
+Content-Type: application/json

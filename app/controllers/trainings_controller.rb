@@ -49,4 +49,12 @@ class TrainingsController < ApplicationController
       render json: { errors: training.errors.full_messages }, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    training_id = current_user.trainings.find_by(id: params[:id])
+    training = Training.find_by(id: training_id)
+
+    training.destroy
+    render json: { message: "Training destroyed!" }.as_json
+  end
 end
