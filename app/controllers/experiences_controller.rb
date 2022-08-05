@@ -51,4 +51,12 @@ class ExperiencesController < ApplicationController
       render json: { errors: experience.errors.full_messages }, status: :unprocessable_entity
     end
   end
+
+  def destroy
+    experience_id = current_user.experiences.find_by(id: params[:id])
+    experience = Experience.find_by(id: experience_id)
+
+    experience.destroy
+    render json: { message: "Experience deleted!" }.as_json
+  end
 end

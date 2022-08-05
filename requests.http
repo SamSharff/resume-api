@@ -1,87 +1,102 @@
-
-@jwt_sam = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTE5Mjg2NTV9.atOGgd8WIWebwlkd-nwa_TjIXg2r-Nf3szmtgA5ADgg
-# @jwt_aaron = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTE1OTA4Nzh9.L5ZQbLatJiPCelfT5jd8-TV9ySpuI4McU92w6LfxfsU
-@jwt_amanda = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5LCJleHAiOjE2NTE5NDE1NzJ9.JLrN3JWfAUVzRA8l8h2oyau5Ar6Vj8U-dgeoXY6XbNE
-@jwt_peter = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMCwiZXhwIjoxNjUxOTQ5MTQyfQ.ual5hiQlj939Jopjg-5KdLblF-_Cvuvie4w8I4bJsb8
+@jwt_sam = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxLCJleHAiOjE2NTk3OTMyMTR9.3cYlgFKt6SgOiJbDNKM9ENLkyxvygqiGpiGwbMJTQJU
+# @jwt_aaron = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoyLCJleHAiOjE2NTIxODc2NTh9.kEsAQMH5gxPYy8ybGhCgEYpvEE6ZekYuej2MCa3LsyY
+# @jwt_amanda = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo5LCJleHAiOjE2NTE5NDE1NzJ9.JLrN3JWfAUVzRA8l8h2oyau5Ar6Vj8U-dgeoXY6XbNE
+# @jwt_peter = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxMCwiZXhwIjoxNjUxOTQ5MTQyfQ.ual5hiQlj939Jopjg-5KdLblF-_Cvuvie4w8I4bJsb8
+# @jwt_michael = eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjoxNSwiZXhwIjoxNjU5NzkyNDk1fQ.HWnBj3pEnFtR7ikKxylUYZ4PCwsllFF3dmDrxMQMckA
 
 ###CREATE USER (sign-up)
 POST http://localhost:3000/users
 Content-Type: application/json
 
 {
-  "name": "Peter",
-  "email": "Peter@test.com",
+  "name": "Michael",
+  "email": "Michael@example.com",
   "password": "password",
   "password_confirmation": "password"
 }
 
-###SESSIONS CREATE
+###CREATE SESSIONS 
 POST http://localhost:3000/sessions.json
 Content-Type: application/json
 
 {
-  "email": "Peter@test.com",
+  "email": "Sam@example.com",
   "password": "password"
 }
 
-                            # EXPERIENCE #
 ###INDEX EXPERIENCE 
 GET http://localhost:3000/experiences
-Authorization: Bearer {{jwt_amanda}}
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 ###CREATE EXPERIENCE 
 POST http://localhost:3000/experiences
-Authorization: Bearer {{jwt_peter}}
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 {
-  "category": "Skill",
-  "description": "Mud Pie"
+  "category": "Job",
+  "org_or_institution": "Dunder Mifflin",
+  "description": "Regional Manager of number one paper company in the universe. World's Best Boss.",
+  "title": "Regional Manager",
+  "dates": "2005 - 2011",
+  "location": "Scranton, PA",
+  "misc": "Toby farted."
   }
 
 ###SHOW EXPERIENCE 
-GET http://localhost:3000/experiences/31
-Authorization: Bearer {{jwt_peter}}
+GET http://localhost:3000/experiences/44
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 ###UPDATE EXPERIENCE 
-PATCH http://localhost:3000/experiences/31
-Authorization: Bearer {{jwt_peter}}
+PATCH http://localhost:3000/experiences/44
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 {
-  "description": "Mud pie"
+  "misc": "Leadership/Toby farted"
 }
 
-                              # TRAINING #
+###DESTROY EXPERIENCE 
+DELETE  http://localhost:3000/experiences/41
+Authorization: Bearer {{jwt_sam}}
+Content-Type: application/json
+
+{
+  "misc": "Leadership/Toby farted"
+}
+
 ###INDEX TRAINING 
 GET http://localhost:3000/trainings
-Authorization: Bearer {{jwt_amanda}}
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 ###CREATE TRAINING 
 POST http://localhost:3000/trainings
-Authorization: Bearer {{jwt_amanda}}
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 {
   "category": "Education",
-  "org_or_institution": "Actualize",
-  "description": "Coding bootcamp",
-  "degree_or_cert": "Cert in web development"
+  "org_or_institution": "Scranton High School",
+  "description": "Attended. Graduated. SAT 1140/1600 suckas",
+  "dates": "1978 - 1982",
+  "degree_or_cert": "Diploma",
+  "location": "Scranton, PA",
+  "misc": "Education"
 }
 
 ###SHOW TRAINING 
-GET http://localhost:3000/trainings/6
-Authorization: Bearer {{jwt_amanda}}
+GET http://localhost:3000/trainings/17
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 ###UPDATE TRAINING
-PATCH http://localhost:3000/trainings/6
-Authorization: Bearer {{jwt_amanda}}
+PATCH http://localhost:3000/trainings/17
+Authorization: Bearer {{jwt_sam}}
 Content-Type: application/json
 
 {
-  "org_or_institution": "College"
+  "dates": "1978 - 1982"
 }
